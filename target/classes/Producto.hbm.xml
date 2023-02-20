@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.xstore.gestion.tablas.auxiliares.Producto" table="Producto" schema="XStore">
+        <id name="idProducto">
+            <column name="IdProducto" sql-type="int"/>
+        </id>
+        <property name="nombreDeProducto">
+            <column name="NombreDeProducto" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="descripcionDeProducto">
+            <column name="DescripcionDeProducto" sql-type="varchar(260)" length="260" not-null="true"/>
+        </property>
+        <property name="precioDeProducto">
+            <column name="PrecioDeProducto" sql-type="int"/>
+        </property>
+        <property name="categoriaDeProducto">
+            <column name="CategoriaDeProducto" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

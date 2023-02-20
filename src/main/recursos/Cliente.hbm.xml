@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.xstore.gestion.tablas.auxiliares.Cliente" table="Cliente" schema="XStore">
+        <id name="idCliente">
+            <column name="IdCliente" sql-type="int"/>
+        </id>
+        <property name="nombreDeCliente">
+            <column name="NombreDeCliente" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="direccionDeEnvio">
+            <column name="DireccionDeEnvio" sql-type="varchar(260)" length="260"/>
+        </property>
+        <property name="numeroDeCuenta">
+            <column name="NumeroDeCuenta" sql-type="int"/>
+        </property>
+        <property name="emailDeCliente">
+            <column name="EmailDeCliente" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="telefonoDeCliente">
+            <column name="TelefonoDeCliente" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

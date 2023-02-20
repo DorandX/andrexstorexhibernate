@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.xstore.gestion.tablas.Carrito" table="carrito" schema="XStore">
+        <id name="id">
+            <column name="Id" sql-type="int"/>
+        </id>
+        <property name="cliente">
+            <column name="Cliente" sql-type="int"/>
+        </property>
+        <property name="total">
+            <column name="Total" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>
